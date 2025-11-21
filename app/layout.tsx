@@ -4,6 +4,7 @@ import "./globals.css";
 
 const stackSans = localFont({
   src: [
+    { path: "../public/fonts/StackSansNotch-VariableFont_wght.ttf", weight: "200 700" },
     { path: "../public/fonts/StackSansNotch-ExtraLight.ttf", weight: "200" },
     { path: "../public/fonts/StackSansNotch-Light.ttf", weight: "300" },
     { path: "../public/fonts/StackSansNotch-Regular.ttf", weight: "400" },
@@ -12,6 +13,7 @@ const stackSans = localFont({
     { path: "../public/fonts/StackSansNotch-Bold.ttf", weight: "700" },
   ],
   variable: "--font-stack-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
