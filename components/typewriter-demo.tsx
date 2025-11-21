@@ -1,0 +1,41 @@
+"use client";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+export function TypewriterEffectSmoothDemo() {
+  const words = [
+    {
+      text: "Get",
+    },
+    {
+      text: "More",
+    },
+    {
+      text: "Interviews",
+    },
+    {
+      text: "by",
+    },
+    {
+      text: "Applying",
+    },
+    {
+      text: "Faster.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+  return (
+    <div className="flex flex-col items-center justify-center h-[40rem]  ">
+      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+        Don't let repetitive forms slow down your career
+      </p>
+      <TypewriterEffectSmooth words={words} />
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+        <a href="/extension.zip" download className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm flex items-center justify-center">
+          Download Now
+        </a>
+        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+          Learn More
+        </button>
+      </div>
+    </div>
+  );
+}
