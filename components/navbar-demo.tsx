@@ -20,8 +20,8 @@ export function NavbarDemo() {
       link: "/#features",
     },
     {
-      name: "How it Works",
-      link: "/#video",
+      name: "How to use",
+      link: "/how-to-page",
     },
     {
       name: "Benefits",
