@@ -32,7 +32,7 @@ export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <Navbar className="!fixed">
+    <Navbar className="fixed!">
       {/* Desktop Navigation */}
       <NavBody>
         <NavbarLogo />

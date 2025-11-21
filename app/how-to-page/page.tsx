@@ -110,7 +110,7 @@ export default function HowToPage() {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="flex items-start gap-4 p-4 rounded-xl hover:bg-neutral-50 transition-colors"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center font-bold text-lg">
+                <div className="shrink-0 w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center font-bold text-lg">
                   {step.number}
                 </div>
                 <div className="flex items-center gap-3 flex-1">
