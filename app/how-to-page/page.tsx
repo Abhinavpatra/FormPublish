@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { NavbarDemo } from "@/components/navbar-demo";
 import { motion } from "motion/react";
 import {
@@ -15,8 +16,15 @@ import {
   VideoPlayerVolumeRange,
 } from '@/components/ui/shadcn-io/video-player';
 import { Download, FolderOpen, Puzzle, CheckCircle } from "lucide-react";
+import { LoaderFour } from "@/components/ui/loader";
 
 export default function HowToPage() {
+  const [isVideoReady, setIsVideoReady] = useState(false);
+
+  const handleVideoCanPlay = () => {
+    setIsVideoReady(true);
+  };
+
   const steps = [
     {
       number: 1,
@@ -67,8 +75,13 @@ export default function HowToPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-12"
+          className="mb-12 relative"
         >
+          {!isVideoReady && (
+            <div className="absolute inset-0 flex items-center justify-center bg-neutral-50 z-10 rounded-lg">
+              <LoaderFour text="Video demonstration" />
+            </div>
+          )}
           <VideoPlayer className="overflow-hidden rounded-lg border shadow-2xl">
             <VideoPlayerContent
               crossOrigin=""
@@ -78,6 +91,7 @@ export default function HowToPage() {
               preload="auto"
               slot="media"
               src="/how-to-use.mp4"
+              onCanPlay={handleVideoCanPlay}
             />
             <VideoPlayerControlBar>
               <VideoPlayerPlayButton />
