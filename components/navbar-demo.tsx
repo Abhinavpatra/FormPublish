@@ -21,7 +21,7 @@ export function NavbarDemo() {
     },
     {
       name: "How to use",
-      link: "/how-to-page",
+      link: "/how-to-use",
     },
     {
       name: "Benefits",

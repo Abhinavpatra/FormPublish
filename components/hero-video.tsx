@@ -27,7 +27,7 @@ const HeroVideo = () => {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.5 }}
       className="w-full max-w-4xl mx-auto my-8 px-4 relative"
     >
       {!isVideoReady && (
